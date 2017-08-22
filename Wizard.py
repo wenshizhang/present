@@ -7,8 +7,8 @@
 #########################################################################
 
 import sys
-from PyQt4 import QtGui
-from PyQt4.QtCore import Qt
+from PyQt4 import QtGui,QtCore
+#from PyQt4.QtCore import Qt
 
 def createPage():
 #new pages, new layout
@@ -33,4 +33,23 @@ def setInput(page,layout):
 	page.setLayout(layout);
 
 	return edit;
+
+def setwindow(wiz):
+	wiz.setWindowTitle("Present for Yanfei");
+	wiz.setWizardStyle(QtGui.QWizard.ModernStyle);
+
+#	layout = [QtGui.QWizard.Stretch,QtGui.QWizard.NextButton,QtGui.QWizard.NextButton]
+#	wiz.setButtonLayout(layout);
+
+	wiz.setOption(QtGui.QWizard.NoBackButtonOnStartPage);
+	wiz.setOption(QtGui.QWizard.NoCancelButton);
+
+def setButton(page,Back,Next,Finish):
+	if Back.strip():
+		page.setButtonText(QtGui.QWizard.BackButton,Back);
+	if Next.strip():
+		page.setButtonText(QtGui.QWizard.NextButton,Next);
+	if Finish.strip():
+		page.setButtonText(QtGui.QWizard.FinishButton,Finish);
+
 
