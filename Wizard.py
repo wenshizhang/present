@@ -8,10 +8,21 @@
 
 import sys
 from PyQt4 import QtGui,QtCore
-#from PyQt4.QtCore import Qt
+
+def backEvent():
+	wiz = QtGui.QWizard();
+	page = QtGui.QWizardPage();
+
+	label = QtGui.QLabel(page);
+	label.setText("this message just for show");
+
+	wiz.addPage(page);
+	wiz.show();
+
+def printmessage(wiz):
+	print "this message just for show";
 
 def createPage():
-#new pages, new layout
 	page = QtGui.QWizardPage();
 	layout = QtGui.QVBoxLayout();
 	return page,layout;
@@ -29,6 +40,8 @@ def setPageLabel(labeltext,page,layout):
 
 def setInput(page,layout):
 	edit = QtGui.QLineEdit(page);
+	edit.resize(50,50);
+	edit.setFixedWidth(200);
 	layout.addWidget(edit);
 	page.setLayout(layout);
 
@@ -36,10 +49,8 @@ def setInput(page,layout):
 
 def setwindow(wiz):
 	wiz.setWindowTitle("Present for Yanfei");
+	wiz.setGeometry(300,100,900,300);
 	wiz.setWizardStyle(QtGui.QWizard.ModernStyle);
-
-#	layout = [QtGui.QWizard.Stretch,QtGui.QWizard.NextButton,QtGui.QWizard.NextButton]
-#	wiz.setButtonLayout(layout);
 
 	wiz.setOption(QtGui.QWizard.NoBackButtonOnStartPage);
 	wiz.setOption(QtGui.QWizard.NoCancelButton);

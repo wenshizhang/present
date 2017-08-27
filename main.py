@@ -82,7 +82,6 @@ def createWelcomePage(wiz):
 	
 	Wizard.setPageLabel(unicode("太好了，我就是找你呀！ :)",'utf-8'),Page,Layout);
 	Wizard.setPageLabel(unicode("今天开不开心呀? :)",'utf-8'),Page,Layout);
-
 	Wizard.setButton(Page,unicode("不开心","utf-8"),unicode("当然开心啦","utf-8"),"")
 
 	return Page;
@@ -239,9 +238,9 @@ def createWantPage(wiz):
 def createTrustPage(wiz):
 	Page,Layout = Wizard.createPage()
 	
-	Wizard.setPageLabel(unicode("信任意味着忍耐克己，不多想一分，相信每一个决定每一句话的出发点是为了对方",'utf-8'),Page,Layout);
-	Wizard.setPageLabel(unicode("我愿意相信臭臭。",'utf-8'),Page,Layout);
-	Wizard.setButton(Page,unicode("前一个","utf-8"),unicode("下一个","utf-8"),"");
+	Wizard.setPageLabel(unicode("信任意味着忍耐克己,总是相信每一个决定每一句话的出发点是为了对方",'utf-8'),Page,Layout);
+	Wizard.setPageLabel(unicode("我愿意相信臭臭",'utf-8'),Page,Layout);
+	Wizard.setButton(Page,unicode("前一句话","utf-8"),unicode("下一句话","utf-8"),"");
 
 	return Page;
 
@@ -249,7 +248,7 @@ def createUnderstandPage(wiz):
 	Page,Layout = Wizard.createPage()
 	
 	Wizard.setPageLabel(unicode("理解臭臭",'utf-8'),Page,Layout);
-	Wizard.setButton(Page,unicode("前一个","utf-8"),unicode("下一个","utf-8"),"");
+	Wizard.setButton(Page,unicode("前一句话","utf-8"),unicode("下一句话","utf-8"),"");
 
 	return Page;
 
