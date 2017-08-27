@@ -11,6 +11,16 @@ Oh, this is the shortest README I believe.
 
 There are only two module for now, main and wizard. Main module control all logic, wizard module define wizard related functions. 
 
+#TODO List
+
+For now, present version1.0 is done, yeah! But there are some features maybe can be done in furture version. Here are the list:
+
+* Redesign those pages, make it pretty
+* Wizard back event, when user press back button, new windows should be opened
+* Label text format doesn't look pretty at all, it can be adjust use html but I don't know how
+    
+ 
+
 # How to use
 
 Just compilation main.py, very simple.
