@@ -8,11 +8,14 @@
 #########################################################################
 
 import sys
+#sys.path.append("C:/Python27/Lib/site-packages/PyQt4")
 from PyQt4 import QtGui
 import Wizard
 
 
 def main():
+
+	print "this for test";
 	app = QtGui.QApplication(sys.argv);
 	wiz = QtGui.QWizard();
 
@@ -66,6 +69,8 @@ def main():
 	wiz.show();
 
 	sys.exit(app.exec_());
+	while True:
+		pass
 
 
 def createNamePage(wiz):
